@@ -1,0 +1,196 @@
+Git stash
+===========
+This is used to freeze the git in its current state so that we can continue with some other activites.
+
+If the develoepr has some unfinished work that he wants to leave for now and he wants to work on a new functionality code development then he can send the files into the stash area.All the files moved into the stash area will not be touched by git until they are popped out of the stash area
+
+1 To stash the files present in stagging area
+  git stash
+
+2 To stash the files present in stagging area and untracked section
+  git stash -u
+
+3 To stash the files present in stagging area,untracked section and   .gitignore
+  git stash -a
+
+4 To see the list of stashes
+  git stash list
+
+5 To unstash the latest stash
+  git stash pop
+
+6 To unstash an older stash
+  git stash pop stash@{stashno}
+
+
+Note: .gitignore is used for storing info about private files that we don't want git to access but .gitignnore file itself will move into the stagging area,local repository and remote repository
+
+To prevent .gitignore from being accessable by git we can use
+ git stash -a
+
+
+Tagging in Git
+====================
+Tags are used for placing books marks on the commit hisotry
+This is used for identifying the important commits that are available
+They contain info about who created the tag when it was created and why it
+was created
+
+Git supports 2 types of tags
+--------------------------------
+1 lightweight tag
+2 annoted tag
+
+1 To create a light weight tag
+  git tag tagname
+
+2 To see the list of all the tags
+  git tag 
+
+3 To create an annoted tag
+  git tag -a tagname -m "some message"
+
+4 To see annoted tag info
+  git show tagname
+
+Note: tags are by default created only for the latest commit
+
+5 To create a tag for an older commit
+  git tag -a tagname -m "some message" older_commitid
+
+6 To delete a tag
+  git tag -d tagname
+
+7 To push all tags into github
+  git push --tags
+
+8 To remove the tags that are pushed into github
+  git push origin :tagname
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
